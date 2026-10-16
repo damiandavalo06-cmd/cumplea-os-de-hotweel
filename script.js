@@ -149,7 +149,7 @@ function step() {
   fill.style.strokeDashoffset = 339.3 * (1 - charge / 100);
   $('intro').style.setProperty('--p', charge / 100); // el auto avanza por la ruta
   car.classList.toggle('rev', holding && charge > 5);
-  if (eng) eng.frequency.value = 50 + charge * 5;
+    engineRpm(charge);
   if (charge >= 100) return launch();
   if (holding || charge > 0) requestAnimationFrame(step); else { engine(false); car.classList.remove('rev'); }
 }
