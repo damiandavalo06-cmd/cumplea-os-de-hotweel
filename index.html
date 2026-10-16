@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>¡Cumple Hot Wheels!</title>
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Montserrat:ital,wght@0,500;1,800;1,900&family=Roboto:ital,wght@1,500&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PANTALLA DE INGRESO -->
+<section id="intro">
+  <h1 class="hw">HOT WHEELS</h1>
+  <p class="pre">Te invito a festejar el cumple de</p>
+  <h2 class="nm" id="introNombre">DANIEL!</h2>
+
+  <div class="road" aria-hidden="true">
+    <div class="fin">FINISH</div><div class="chk"></div>
+    <div class="car"></div>
+    <svg class="fire" viewBox="0 0 150 40" preserveAspectRatio="none">
+      <defs><linearGradient id="fg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff5500"/><stop offset="1" stop-color="#ffcc00"/></linearGradient>
+        <path id="fl" d="M0 40 C-12 30 -3 20 -6 4 C8 12 16 28 10 40Z" fill="url(#fg)"/></defs>
+      <use href="#fl" x="22"/><use href="#fl" x="52"/><use href="#fl" x="82"/><use href="#fl" x="112"/><use href="#fl" x="138"/>
+    </svg>
+  </div>
+  <div class="ring-wrap">
+    <div id="carpic">
+      <button id="start" aria-label="Mantené apretado para acelerar">
+        <svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="54"/><circle id="fill" cx="60" cy="60" r="54"/></svg>
+        <span>MANTENÉ<br>APRETADO</span>
+      </button>
+    </div>
+    <p class="tip">para acelerar y abrir la invitación</p>
+  </div>
+</section>
+
+<div id="wipe"></div>
+
+<!-- INVITACIÓN -->
+<main id="invite" hidden>
+  <button id="music" aria-label="Música">🔊</button>
+  <canvas id="confetti"></canvas>
+
+  <header class="hero">
+    <span class="fly f1">🏎️</span><span class="fly f2">🚗</span><span class="fly f3">🏁</span>
+    <p class="kicker">Te invito a festejar mi cumple</p>
+    <h1 class="logo big" id="nombre">DANIEL</h1>
+    <div class="age" id="edad">7</div>
+    <img class="hero-img" src="imagenes/tomas.jpg" alt="Piloto Hot Wheels">
+  </header>
+
+  <section class="band">
+    <h2>La carrera empieza en…</h2>
+    <div class="count" id="count">
+      <div><b id="d">0</b><small>días</small></div>
+      <div><b id="h">0</b><small>horas</small></div>
+      <div><b id="m">0</b><small>min</small></div>
+      <div><b id="s">0</b><small>seg</small></div>
+    </div>
+    <p id="fin" hidden class="logo">¡LA CARRERA COMENZÓ!</p>
+  </section>
+
+  <section class="sec">
+    <h2>Datos de la pista</h2>
+    <div class="info">
+      <div>📅<span id="fechaTxt"></span></div>
+      <div>⏰<span id="horaTxt"></span></div>
+      <div>📍<span id="lugarTxt"></span></div>
+    </div>
+    <iframe id="map" loading="lazy" title="Mapa"></iframe>
+    <a id="como" class="btn" target="_blank" rel="noopener">🧭 Cómo llegar</a>
+  </section>
+
+  <section class="sec">
+    <h2>Galería de autos</h2>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section class="sec rsvp">
+    <h2>¿Venís a correr?</h2>
+    <input id="quien" placeholder="Tu nombre" autocomplete="name">
+    <select id="cant"><option>1 persona</option><option>2 personas</option><option>3 personas</option><option>4 personas</option><option>5 personas</option></select>
+    <button id="ok" class="btn">✅ ¡Confirmo mi asistencia!</button>
+    <button id="no" class="btn alt">No puedo ir</button>
+  </section>
+
+  <footer class="check"><span>¡Te espero en la línea de largada!</span></footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
